@@ -10,15 +10,13 @@ let personChoice = () => {
 
     //invoke the computer choice function
     let computerChoice = computerPlay();
-    const pcChoice = computerChoice.toLowerCase()
-
+    const pcChoice = computerChoice.toLowerCase();
     //playing with the DOM
     const yourChoice = document.getElementById('choice').value.toLowerCase();
 
     document.getElementById('PersonChoice').textContent = `Your choice is ${yourChoice}.`;
 
     document.getElementById('ComputerChoice').textContent = `Computer choice is ${pcChoice}.`;
-
 
     for (let rounds = 1; rounds <= 5; rounds++) {
         console.log(rounds);
