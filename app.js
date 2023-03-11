@@ -5,16 +5,15 @@ let computerPlay = () => {
 
     return choices[randomChoice];
 }
-computerPlay();
 
-let personChoice = (event) => {
-    event.preventDefault(); // prevent form submission and page reload
+let personChoice = () => {
 
+    //invoke the computer choice function
     let computerChoice = computerPlay();
-
-    const yourChoice = document.getElementById('choice').value.toLowerCase();
-
     const pcChoice = computerChoice.toLowerCase()
+
+    //playing with the DOM
+    const yourChoice = document.getElementById('choice').value.toLowerCase();
 
     document.getElementById('PersonChoice').textContent = `Your choice is ${yourChoice}.`;
 
@@ -22,7 +21,7 @@ let personChoice = (event) => {
 
 
     for (let rounds = 1; rounds <= 5; rounds++) {
-
+        console.log(rounds);
         if (yourChoice === pcChoice) {
             document.getElementById('Winner').textContent = `It's a tie!`;
         } else if (
